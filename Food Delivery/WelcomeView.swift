@@ -25,6 +25,7 @@ struct WelcomeView: View {
                     .foregroundStyle(.white)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 20, weight: .semibold))
+                    
                 Button(action:{
                     print("Start Shopping clicked!")
                 }){
