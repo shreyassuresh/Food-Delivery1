@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F0C7FFA2D3A891900443AE8 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C7FF92D3A891900443AE8 /* LoginView.swift */; };
+		3F0C7FFA2D3A891900443AE8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C7FF92D3A891900443AE8 /* SignInView.swift */; };
 		3F3232832D3BD23200E9D24F /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3232822D3BD23200E9D24F /* UIExtension.swift */; };
+		3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46667E2D3E883700D79C18 /* SignUpView.swift */; };
+		3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F73E2CC2D3E661F007EE633 /* LoginView.swift */; };
 		3F95566A2D314E0300263D0F /* Food_DeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9556692D314E0300263D0F /* Food_DeliveryApp.swift */; };
 		3F95566C2D314E0300263D0F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95566B2D314E0300263D0F /* WelcomeView.swift */; };
 		3F9556712D314E0400263D0F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F9556702D314E0400263D0F /* Preview Assets.xcassets */; };
@@ -17,8 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3F0C7FF92D3A891900443AE8 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		3F0C7FF92D3A891900443AE8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3F3232822D3BD23200E9D24F /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
+		3F46667E2D3E883700D79C18 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3F73E2CC2D3E661F007EE633 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3F9556662D314E0300263D0F /* Food Delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9556692D314E0300263D0F /* Food_DeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_DeliveryApp.swift; sourceTree = "<group>"; };
 		3F95566B2D314E0300263D0F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
@@ -50,8 +54,9 @@
 		3F3232802D3BD20C00E9D24F /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				3F46667E2D3E883700D79C18 /* SignUpView.swift */,
 				3F95566B2D314E0300263D0F /* WelcomeView.swift */,
-				3F0C7FF92D3A891900443AE8 /* LoginView.swift */,
+				3F0C7FF92D3A891900443AE8 /* SignInView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -67,6 +72,7 @@
 		3F95565D2D314E0300263D0F = {
 			isa = PBXGroup;
 			children = (
+				3F73E2CC2D3E661F007EE633 /* LoginView.swift */,
 				3F9556682D314E0300263D0F /* Food Delivery */,
 				3F9556672D314E0300263D0F /* Products */,
 			);
@@ -176,9 +182,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F0C7FFA2D3A891900443AE8 /* LoginView.swift in Sources */,
+				3F0C7FFA2D3A891900443AE8 /* SignInView.swift in Sources */,
 				3F95566C2D314E0300263D0F /* WelcomeView.swift in Sources */,
 				3F95566A2D314E0300263D0F /* Food_DeliveryApp.swift in Sources */,
+				3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */,
+				3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */,
 				3F3232832D3BD23200E9D24F /* UIExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

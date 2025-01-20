@@ -28,7 +28,7 @@ struct WelcomeView: View {
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
                         .padding(.bottom, 50)
-                    NavigationLink(destination: LoginView()){
+                    NavigationLink(destination: SignInView()){
                         Text("Start Shopping")
                             .font(.customfont(.semibold, fontSize: 19))
                             .foregroundStyle(.white)
