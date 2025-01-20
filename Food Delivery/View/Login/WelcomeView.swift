@@ -35,7 +35,7 @@ struct WelcomeView: View {
                             .multilineTextAlignment(.center
                             )
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
-                            .background(.green)
+                            .background(Color.primaryApp)
                             .cornerRadius(19)
                         
                     }
