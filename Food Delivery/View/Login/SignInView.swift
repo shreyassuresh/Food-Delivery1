@@ -18,6 +18,7 @@ struct SignInView: View {
                     .foregroundColor(Color.primaryApp)
                     .padding(.top,150)
                 
+                
                     Text("Connect with our social media ")
                     .padding(.top,80)
                     .foregroundColor(.gray)
