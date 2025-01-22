@@ -1,8 +1,14 @@
 
 
 import SwiftUI
+import iPhoneNumberField
 
 struct SignInView: View {
+    @Environment(\.dismiss) private var dismiss
+        @Environment(\.presentationMode) var presentationMode
+        @State private var phoneNumber = ""
+        @State private var selectedCountry = Country.india
+        @State private var showCountryPicker = false
     var body: some View {
         ZStack{
             Image("sign_in_top")
@@ -16,11 +22,47 @@ struct SignInView: View {
                     .font(.customfont(.bold, fontSize: 30 ))
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color.primaryApp)
-                    .padding(.top,150)
-                
-                
-                    Text("Connect with our social media ")
-                    .padding(.top,80)
+                    .padding(.top,-20)
+                HStack(spacing: 12){
+                    Button(action:{
+                        showCountryPicker = true
+                    }){
+                        HStack(spacing: 4){
+                            Text(selectedCountry.flag)
+                                .font(.system(size:22))
+                            Text(selectedCountry.dialCode)
+                                .font(.system(size:22))
+                                .foregroundColor(.black)
+                        }
+                        .frame(width: 100)
+                        .padding(.leading, -20)
+                    }
+                    .sheet(isPresented: $showCountryPicker){
+                        NavigationView{
+                            CountryPickerView(selectedCountry: $selectedCountry)
+                                .navigationTitle("Select Country")
+                                .navigationBarTitleDisplayMode(.inline)
+                        }
+                    }
+                    iPhoneNumberField("Enter phone number", text: $phoneNumber)
+                                                .flagHidden(true)
+                                                .flagSelectable(false)
+                                                .formatted(true)
+                                                .font(UIFont(size: 16, weight: .regular))
+                                        }
+                                        .padding(.horizontal, 24)
+                                        .padding(.top,30)
+                                        
+                                        Rectangle()
+                                            .frame(height: 1)
+                                            .foregroundColor(.gray.opacity(0.3))
+                                            .padding(.horizontal, 30)
+                                            .padding(.bottom)
+                                        
+                }
+
+                    Text(" Or connect with our social media ")
+                    .padding(.top,500)
                     .foregroundColor(.gray)
                 NavigationLink{
                     LoginView()
@@ -35,7 +77,7 @@ struct SignInView: View {
                         .cornerRadius(20)
                 }
                 .padding(.horizontal,20)
-                .padding(.bottom, 5)
+                .padding(.top, 230)
                 
                 NavigationLink{
                     SignUpView()
@@ -50,7 +92,7 @@ struct SignInView: View {
                         .cornerRadius(20)
                 }
                 .padding(.horizontal,20)
-                .padding(.bottom, 10)
+                .padding(.top,370 )
                 
                 HStack{
                     Image("google")
@@ -72,11 +114,13 @@ struct SignInView: View {
                                height:40)
                                                 
                 }
+                .padding(.top,600)
             }
         }
     }
-}
+
 
 #Preview {
     SignInView()
 }
+
