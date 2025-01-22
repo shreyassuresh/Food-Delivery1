@@ -9,7 +9,23 @@ import SwiftUI
 
 struct LoginView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            Image("bottom_bg")
+                .resizable()
+                .scaledToFill()
+                .frame(width:.screenWidth, height: .screenHeight)
+                
+            VStack{
+                Image("color_logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 55, height: 55)
+                    .padding(.top,60)
+                Spacer()
+               
+                    
+            }
+        }
     }
 }
 
