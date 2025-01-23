@@ -50,13 +50,14 @@ struct LoginView: View {
                     .padding(.bottom)
                 
                 
+                
                     
                 
                 
  
              
             }
-            .padding(.bottom, 550)
+            .padding(.bottom, 500)
         }
     }
 }
