@@ -13,6 +13,7 @@
 		3F34BB3D2D3FB3D70054544E /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34BB3C2D3FB3D70054544E /* CountryPickerView.swift */; };
 		3F3A8A282D411A61006288C0 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 3F3A8A272D411A61006288C0 /* iPhoneNumberField */; };
 		3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46667E2D3E883700D79C18 /* SignUpView.swift */; };
+		3F6D18422D43A0060096BCB4 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D18412D43A0060096BCB4 /* LoginViewModel.swift */; };
 		3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F73E2CC2D3E661F007EE633 /* LoginView.swift */; };
 		3F95566A2D314E0300263D0F /* Food_DeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9556692D314E0300263D0F /* Food_DeliveryApp.swift */; };
 		3F95566C2D314E0300263D0F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F95566B2D314E0300263D0F /* WelcomeView.swift */; };
@@ -27,6 +28,7 @@
 		3F34BB372D3FB08B0054544E /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3F34BB3C2D3FB3D70054544E /* CountryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		3F46667E2D3E883700D79C18 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		3F6D18412D43A0060096BCB4 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		3F73E2CC2D3E661F007EE633 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3F9556662D314E0300263D0F /* Food Delivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Food Delivery.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F9556692D314E0300263D0F /* Food_DeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food_DeliveryApp.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				3F73E2CC2D3E661F007EE633 /* LoginView.swift */,
 				3F0C7FF92D3A891900443AE8 /* SignInView.swift */,
 				3F95566B2D314E0300263D0F /* WelcomeView.swift */,
+				3F6D18412D43A0060096BCB4 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */,
 				3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */,
 				3F3232832D3BD23200E9D24F /* UIExtension.swift in Sources */,
+				3F6D18422D43A0060096BCB4 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
