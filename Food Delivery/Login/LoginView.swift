@@ -96,7 +96,7 @@ struct LoginView: View {
                 Button {
                     loginVM.serviceCallLogin()
                 } label: {
-                    Text("Login")
+                    Text("Sign In")
                         .font(.custom("YourCustomFont", size: 18))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)

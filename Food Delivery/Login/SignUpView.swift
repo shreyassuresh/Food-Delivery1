@@ -75,7 +75,33 @@ struct SignUpView: View {
                     .padding(.horizontal, 30)
                     .padding(.bottom)
                 
-                
+                VStack(alignment: .leading) {
+                                        HStack {
+                                            Text("By continuing you agree to our")
+                                                .font(.customfont(.medium, fontSize: 14))
+                                                .foregroundColor(.secondaryText)
+                                                .padding(.top, 5)
+                                            Text("Terms of service")
+                                                .font(.customfont(.medium, fontSize: 14))
+                                                .foregroundColor(.primaryApp)
+                                                .padding(.top, 5)
+                                                .padding(.leading, -3)
+                                        }
+                                        
+                                        HStack{
+                                            Text("and")
+                                                .font(.customfont(.medium, fontSize: 14))
+                                                .foregroundColor(.secondaryText)
+                                                .padding(.top, 1)
+                                            
+                                            Text("Privacy Policy.")
+                                                .font(.customfont(.medium, fontSize: 14))
+                                                .foregroundColor(.primaryApp)
+                                                .padding(.top, 1)
+                                                .padding(.leading, -3)
+                                        }
+                                        
+                                    }
                 
                 Button {
                     loginVM.serviceCallLogin()
@@ -88,10 +114,26 @@ struct SignUpView: View {
                         .background(Color.primaryApp)
                         .cornerRadius(20)
                         .padding(.top)
+                    
                 }
                 .padding()
-                .padding(.bottom, 250)
+                .padding(.bottom, 200)
             }
+            HStack{
+                                    Text("Already have an account?")
+                                        .font(.customfont(.semibold, fontSize: 16))
+                                        .foregroundColor(.primaryText)
+                                    
+                                    NavigationLink {
+                                        LoginView()
+                                    } label: {
+                                        Text("Sign In")
+                                            .font(.customfont(.semibold, fontSize: 16))
+                                            .foregroundColor(.primaryApp)
+                                    }
+                                    
+                                }
+            .padding(.top,500)
         }
     }
 }
