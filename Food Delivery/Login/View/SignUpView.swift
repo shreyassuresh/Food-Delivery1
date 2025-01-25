@@ -5,7 +5,7 @@ struct SignUpView: View {
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var username: String = ""
-    @ObservedObject var loginVM = LoginViewModel()  // Initialize ViewModel
+    @ObservedObject var mainVM = MainViewModel()
     
     
     
@@ -43,7 +43,7 @@ struct SignUpView: View {
                     .foregroundColor(.gray)
                 TextField("Enter your username ",text: $username)
                 
-                    .padding(.leading,48)
+                    .padding(.leading,30)
                     .padding(.top,2)
                 Rectangle()
                     .frame(height: 1)
@@ -56,7 +56,7 @@ struct SignUpView: View {
                     .foregroundColor(.gray)
                 TextField("Enter your email ",text: $email)
                 
-                    .padding(.leading,48)
+                    .padding(.leading,30)
                     .padding(.top,2)
                 Rectangle()
                     .frame(height: 1)
@@ -68,7 +68,7 @@ struct SignUpView: View {
                     .padding(.leading,-167)
                     .foregroundColor(.gray)
                 SecureField("Enter your password", text: $password)
-                    .padding(.leading,48)
+                    .padding(.leading,30)
                 Rectangle()
                     .frame(height: 1)
                     .foregroundColor(.gray.opacity(0.3))
@@ -104,7 +104,7 @@ struct SignUpView: View {
                                     }
                 
                 Button {
-                    loginVM.serviceCallLogin()
+                    mainVM.serviceCallLogin()
                 } label: {
                     Text("Login")
                         .font(.custom("YourCustomFont", size: 18))
@@ -131,12 +131,24 @@ struct SignUpView: View {
                                             .font(.customfont(.semibold, fontSize: 16))
                                             .foregroundColor(.primaryApp)
                                     }
-                                    
+//                                    .alert(isPresented: $mainVM.showError, content: {
+//                                        Alert(title: Text(Globs.AppName), message: Text($mainVM.errorMessage) , dismissButton: .default(Text("Ok")))
+//                                            })
+                                    .alert(isPresented: $mainVM.showError, content: {
+                                        Alert(
+                                            title: Text(Globs.AppName),
+                                            message: Text(mainVM.errorMessage), // Remove the `$` here to use the actual String value
+                                            dismissButton: .default(Text("Ok"))
+                                        )
+                                    })
+//
                                 }
             .padding(.top,500)
         }
+        
     }
 }
+   
     
         #Preview {
             SignUpView()
@@ -148,3 +160,4 @@ struct SignUpView: View {
 //        }
 //    }
 
+                                        

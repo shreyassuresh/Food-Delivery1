@@ -3,9 +3,17 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @ObservedObject var loginVM = LoginViewModel()  // Initialize ViewModel
+//    @State private var email: String = ""
+//    @State private var password: String = ""
+//    @ObservedObject var loginVM = MainViewModel()  // Initialize ViewModel
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    
+    // Use simple @State variables for showcasing the UI
+    @State private var txtEmail: String = ""
+    @State private var txtPassword: String = ""
+    @State private var isShowPassword: Bool = false//true
+    @State private var showError: Bool = false
+    @State private var errorMessage: String = "Invalid email or password."
     
     
     
@@ -37,30 +45,36 @@ struct LoginView: View {
                     .foregroundColor(.gray)
                 Spacer()
                     .padding(.top)
-                Text("Email")
-                    .font(.system(size: 15))
-                    .padding(.leading,-167)
-                    .foregroundColor(.gray)
-                TextField("Enter your email ",text: $email)
-                
-                    .padding(.leading,48)
-                    .padding(.top,2)
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(.gray.opacity(0.3))
-                    .padding(.horizontal, 30)
-                    .padding(.bottom)
-                Text("Password")
-                    .font(.system(size: 15))
-                    .padding(.leading,-167)
-                    .foregroundColor(.gray)
-                SecureField("Enter your password", text: $password)
-                    .padding(.leading,48)
-                Rectangle()
-                    .frame(height: 1)
-                    .foregroundColor(.gray.opacity(0.3))
-                    .padding(.horizontal, 30)
-                    .padding(.bottom)
+                LineTextField(title: "Email", placholder: "Enter your email address", txt: $txtEmail, keyboardType: .emailAddress)
+                                    .padding(.bottom, .screenWidth * 0.07)
+                                
+                                // SecureField for Password
+                                LineSecureField(title: "Password", placholder: "Enter your password", txt: $txtPassword, isShowPassword: $isShowPassword)
+                                    .padding(.bottom, .screenWidth * 0.02)
+//                Text("Email")
+//                    .font(.system(size: 15))
+//                    .padding(.leading,-167)
+//                    .foregroundColor(.gray)
+//                TextField("Enter your email ",text: $email)
+//                
+//                    .padding(.leading,30)
+//                    .padding(.top,2)
+//                Rectangle()
+//                    .frame(height: 1)
+//                    .foregroundColor(.gray.opacity(0.3))
+//                    .padding(.horizontal, 30)
+//                    .padding(.bottom)
+//                Text("Password")
+//                    .font(.system(size: 15))
+//                    .padding(.leading,-167)
+//                    .foregroundColor(.gray)
+//                SecureField("Enter your password", text: $password)
+//                    .padding(.leading,30)
+//                Rectangle()
+//                    .frame(height: 1)
+//                    .foregroundColor(.gray.opacity(0.3))
+//                    .padding(.horizontal, 30)
+//                    .padding(.bottom)
                 //                Button {
                 //
                 //                    } label: {
@@ -94,7 +108,7 @@ struct LoginView: View {
                 .padding(.bottom, -40)
                 
                 Button {
-                    loginVM.serviceCallLogin()
+//                  loginVM.serviceCallLogin()
                 } label: {
                     Text("Sign In")
                         .font(.custom("YourCustomFont", size: 18))
@@ -107,6 +121,13 @@ struct LoginView: View {
                 }
                 .padding()
                 .padding(.bottom, 250)
+//                .alert(isPresented: $mainVM.showError, content: {
+//                    Alert(
+//                        title: Text(Globs.AppName),
+//                        message: Text(mainVM.errorMessage), // Remove the `$` here to use the actual String value
+//                        dismissButton: .default(Text("Ok"))
+//                    )
+//                })
             }
         }
     }
