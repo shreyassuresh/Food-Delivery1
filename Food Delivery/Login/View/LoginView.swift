@@ -3,9 +3,9 @@
 import SwiftUI
 
 struct LoginView: View {
-//    @State private var email: String = ""
-//    @State private var password: String = ""
-//    @ObservedObject var loginVM = MainViewModel()  // Initialize ViewModel
+    @State private var email: String = ""
+    @State private var password: String = ""
+    @ObservedObject var loginVM = MainViewModel()  // Initialize ViewModel
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     
     // Use simple @State variables for showcasing the UI
@@ -111,9 +111,9 @@ struct LoginView: View {
                 .padding(.bottom, -40)
                 
                 Button {
-//                  loginVM.serviceCallLogin()
+                   // mainVM.serviceCallLogin()
                 } label: {
-                    Text("Sign In")
+                    Text("Login")
                         .font(.custom("YourCustomFont", size: 18))
                         .foregroundColor(.white)
                         .multilineTextAlignment(.center)
@@ -121,9 +121,24 @@ struct LoginView: View {
                         .background(Color.primaryApp)
                         .cornerRadius(20)
                         .padding(.top)
+                    
                 }
                 .padding()
-                .padding(.bottom, 250)
+                .padding(.bottom, 220)
+            }
+            HStack{
+                                    Text("Already have an account?")
+                                        .font(.customfont(.semibold, fontSize: 16))
+                                        .foregroundColor(.primaryText)
+                                    
+                                    NavigationLink {
+                                        LoginView()
+                                    } label: {
+                                        Text("Sign In")
+                                            .font(.customfont(.semibold, fontSize: 16))
+                                            .foregroundColor(.primaryApp)
+                                    }
+                                    
 //                .alert(isPresented: $mainVM.showError, content: {
 //                    Alert(
 //                        title: Text(Globs.AppName),
@@ -132,6 +147,7 @@ struct LoginView: View {
 //                    )
 //                })
             }
+            .padding(.top,500)
         }
     }
 }
