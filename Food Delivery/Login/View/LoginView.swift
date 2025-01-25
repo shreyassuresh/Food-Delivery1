@@ -46,11 +46,14 @@ struct LoginView: View {
                 Spacer()
                     .padding(.top)
                 LineTextField(title: "Email", placholder: "Enter your email address", txt: $txtEmail, keyboardType: .emailAddress)
-                                    .padding(.bottom, .screenWidth * 0.07)
+                                    .padding(.bottom, 30)
+                                    .padding(.horizontal,20)
+                
                                 
                                 // SecureField for Password
                                 LineSecureField(title: "Password", placholder: "Enter your password", txt: $txtPassword, isShowPassword: $isShowPassword)
-                                    .padding(.bottom, .screenWidth * 0.02)
+                                    .padding(.bottom, 10)
+                                    .padding(.horizontal,20)
 //                Text("Email")
 //                    .font(.system(size: 15))
 //                    .padding(.leading,-167)
