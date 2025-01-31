@@ -164,7 +164,7 @@ struct SignUpView: View {
         #Preview {
             SignUpView()
         }
-    
+    //trial
 //    struct LoginView_Previews: PreviewProvider {
 //        static var previews: some View {
 //            LoginView()
