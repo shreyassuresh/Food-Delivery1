@@ -37,7 +37,6 @@ struct WelcomeView: View {
                             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 60, maxHeight: 60)
                             .background(Color.primaryApp)
                             .cornerRadius(19)
-                        
                     }
                       Spacer()
                         .frame(height: 100)
