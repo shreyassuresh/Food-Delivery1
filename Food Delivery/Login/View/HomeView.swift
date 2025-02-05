@@ -47,6 +47,7 @@ struct HomeView: View {
                             .foregroundColor(.green)
                             .padding(.leading,140)
                     }
+                  
                     HStack{
                         Image("banana")
                             .resizable()
