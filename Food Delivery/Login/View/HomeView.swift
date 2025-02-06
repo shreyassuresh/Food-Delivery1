@@ -48,26 +48,53 @@ struct HomeView: View {
                             .padding(.leading,140)
                     }
                   
-                    HStack{
-                        Image("banana")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 100, height: 100)
-                        VStack(alignment: .leading){
-                            Text("Banana")
-                                .font(.system(size: 17, weight: .medium))
-                            Text("Rs. 99")
-                                .font(.system(size: 13))
-                                              }
+                
+                        HStack{
+                            Image("banana")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 100, height: 100)
+                                .overlay(
+                                                                Rectangle()
+                                                                    .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                                                    .frame(width: 100, height: 100)
+                                                                    .cornerRadius(10)
+                                                            )
+                            VStack(alignment: .leading){
+                                Text("Banana")
+                                    .font(.system(size: 17, weight: .medium))
+                                Text("Rs. 99")
+                                    .font(.system(size: 13))
+                            }
+                       
                         Image("apple_red")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 100, height: 100)
-                        VStack(alignment: .leading){
-                            Text("Apple Red")
-                                .font(.system(size: 17, weight: .medium))
-                            Text("Rs. 169")
-                                .font(.system(size: 13))
+                            .overlay(
+                                                            Rectangle()
+                                                                .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                                                .frame(width: 100, height: 100)
+                                                                .cornerRadius(10)
+                                                        )
+                            Image("add_green")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .overlay(
+                                                                Rectangle()
+                                                                    .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                                                    .frame(width: 30, height: 30)
+                                                                    .cornerRadius(10)
+                                                            )
+                            
+                            VStack(alignment: .leading){
+                                Text("Apple Red")
+                                    .font(.system(size: 17, weight: .medium))
+                                Text("Rs. 169")
+                                    .font(.system(size: 13))
+                               
+                                }
                             //testing
                         }
                     }
@@ -78,7 +105,7 @@ struct HomeView: View {
             }
         }
     }
-}
+
         #Preview {
             HomeView()
 //    struct HomeView_Previews: PreviewProvider {
