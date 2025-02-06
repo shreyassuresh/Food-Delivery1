@@ -68,6 +68,7 @@ struct HomeView: View {
                                 .font(.system(size: 17, weight: .medium))
                             Text("Rs. 169")
                                 .font(.system(size: 13))
+                            //testing
                         }
                     }
 //                    .padding(.top, 20)
