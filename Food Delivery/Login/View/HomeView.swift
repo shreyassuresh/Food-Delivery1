@@ -60,6 +60,16 @@ struct HomeView: View {
                                                                     .frame(width: 100, height: 100)
                                                                     .cornerRadius(10)
                                                             )
+                            Image("add_green")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 20, height: 20)
+                                .overlay(
+                                                                Rectangle()
+                                                                    .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                                                    .frame(width: 30, height: 30)
+                                                                    .cornerRadius(10)
+                                                            )
                             VStack(alignment: .leading){
                                 Text("Banana")
                                     .font(.system(size: 17, weight: .medium))
