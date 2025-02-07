@@ -39,6 +39,8 @@ struct HomeView: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width:350)
+                    Spacer()
+                    Spacer()
                     HStack{
                         Text("Exclusive Offer")
                         .font(.system(size: 23, weight: .semibold))
@@ -111,7 +113,11 @@ struct HomeView: View {
                                 }
                             //testing
                         }
+                    Spacer()
+                    Spacer()
+                    Spacer()
                     HStack{
+                        
                         Text("Best Selling")
                         .font(.system(size: 23, weight: .semibold))
                         .padding(.trailing, 60)
@@ -124,7 +130,7 @@ struct HomeView: View {
                             
                         
                             HStack{
-                                Image("banana")
+                                Image("bell_pepper_red")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 100, height: 100)
@@ -145,13 +151,12 @@ struct HomeView: View {
                                                                         .cornerRadius(10)
                                                                 )
                                 VStack(alignment: .leading){
-                                    Text("Banana")
+                                    Text("Bell Pepper\n- Red")
                                         .font(.system(size: 17, weight: .medium))
-                                    Text("Rs. 99")
+                                    Text("Rs. 69")
                                         .font(.system(size: 13))
                                 }
-                           
-                            Image("apple_red")
+                                Image("ginger")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 100, height: 100)
@@ -173,7 +178,7 @@ struct HomeView: View {
                                                                 )
                                 
                                 VStack(alignment: .leading){
-                                    Text("Apple Red")
+                                    Text("Ginger")
                                         .font(.system(size: 17, weight: .medium))
                                     Text("Rs. 169")
                                         .font(.system(size: 13))
