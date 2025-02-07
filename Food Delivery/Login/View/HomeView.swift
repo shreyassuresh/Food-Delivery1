@@ -186,8 +186,19 @@ struct HomeView: View {
                                 
                                    
                                     }
-                                //testing
-                            }
+                       }
+                    Spacer()
+                    Spacer()
+                    HStack{
+                        Text("Groceries")
+                        .font(.system(size: 23, weight: .semibold))
+                        .padding(.trailing,70)
+
+                        Text("See all")
+                            .foregroundColor(.green)
+                            .padding(.leading,130)
+                    }                                //testing
+                       
 
                     }
 //                    .padding(.top, 20)
