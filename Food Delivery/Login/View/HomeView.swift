@@ -48,7 +48,9 @@ struct HomeView: View {
                             .padding(.leading,140)
                     }
                   
-                
+                ScrollView(.horizontal, showsIndicators: false) {
+                        
+                    
                         HStack{
                             Image("banana")
                                 .resizable()
@@ -103,10 +105,22 @@ struct HomeView: View {
                                     .font(.system(size: 17, weight: .medium))
                                 Text("Rs. 169")
                                     .font(.system(size: 13))
+                            }
+                            
                                
                                 }
                             //testing
                         }
+                    HStack{
+                        Text("Best Selling")
+                        .font(.system(size: 23, weight: .semibold))
+                        .padding(.trailing, 60)
+
+                        Text("See all")
+                            .foregroundColor(.green)
+                            .padding(.leading,119)
+                    }
+
                     }
 //                    .padding(.top, 20)
 //                    .padding(.horizontal, 15)
