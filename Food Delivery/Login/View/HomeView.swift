@@ -202,14 +202,14 @@ struct HomeView: View {
                         HStack{
                             Image("pulses")
                                 .resizable()
-                                .frame(width: 70, height: 70)
+                                .frame(width: 60, height: 60)
                             VStack(alignment: .leading){
                                 Text("Pulses")
                                     .font(.system(size: 17, weight: .medium))
                                     .overlay(
                                         Rectangle()
                                             .fill(Color.pink.opacity(0.1)) // Semi-transparent rectangle
-                                            .frame(width: 210, height: 110)
+                                            .frame(width: 230, height: 110)
                                             .cornerRadius(20))
                                 
                                 
@@ -217,15 +217,15 @@ struct HomeView: View {
                             Image("rice")
                                 .resizable()
                                 .scaledToFit()
-                                .frame(width: 70, height: 70)
+                                .frame(width: 60, height: 60)
                                 .padding(.leading,130)
                             VStack(alignment: .leading){
                                 Text("Rice")
                                     .font(.system(size: 17, weight: .medium))
                                     .overlay(
                                         Rectangle()
-                                            .fill(Color.pink.opacity(0.1)) // Semi-transparent rectangle
-                                            .frame(width: 210, height: 110)
+                                            .fill(Color.green.opacity(0.1)) // Semi-transparent rectangle
+                                            .frame(width: 230, height: 110)
                                             .cornerRadius(20))
                                 
                             }
