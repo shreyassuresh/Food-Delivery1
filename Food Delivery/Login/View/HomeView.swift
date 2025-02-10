@@ -198,6 +198,25 @@ struct HomeView: View {
                             .foregroundColor(.green)
                             .padding(.leading,130)
                     }                                //testing
+                    ScrollView(.horizontal, showsIndicators: false) {
+                    HStack{
+                        Image("pulses")
+                            .resizable()
+                            .frame(width: 70, height: 70)
+                        VStack(alignment: .leading){
+                            Text("Pulses")
+                                .font(.system(size: 17, weight: .medium))
+                                .overlay(
+                                    Rectangle()
+                                        .fill(Color.pink.opacity(0.1)) // Semi-transparent rectangle
+                                        .frame(width: 210, height: 110)
+                                        .cornerRadius(20))
+                        
+                                
+                        }
+                            
+                        }
+                    }
                        
 
                     }
