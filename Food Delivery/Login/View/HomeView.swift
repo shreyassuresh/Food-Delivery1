@@ -123,16 +123,30 @@ struct HomeView: View {
                                     .overlay(
                                         Rectangle()
                                             .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                            .frame(width: 110, height: 200)
+                                            .frame(width: 150, height: 200)
                                             .cornerRadius(10)
                                     )
-                                
-                                VStack(alignment: .leading){
-                                    Text("Bell Pepper\n- Red")
-                                        .font(.system(size: 17, weight: .medium))
-                                    Text("Rs. 69")
-                                        .font(.system(size: 13))
-                                }}
+                                HStack{
+                                    VStack(alignment: .leading){
+                                        Text("Bell Pepper\n- Red")
+                                            .font(.system(size: 17, weight: .medium))
+                                        Text("Rs. 69")
+                                            .font(.system(size: 13))
+                                    }
+                                    Image("add_green")
+                                                                    .resizable()
+                                                                    .scaledToFit()
+                                                                    .frame(width: 20, height: 20)
+                                                                    .overlay(
+                                                                        Rectangle()
+                                                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                                                            .frame(width: 30, height: 30)
+                                                                            .cornerRadius(10)
+                                                                    )
+                                    }}
+                            Spacer()
+                            Spacer()
+                            Spacer()
                             Spacer()
                             Spacer()
                             Spacer()
@@ -144,7 +158,7 @@ struct HomeView: View {
                                     .overlay(
                                         Rectangle()
                                             .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                            .frame(width: 110, height: 200)
+                                            .frame(width: 150, height: 200)
                                             .cornerRadius(10)
                                     )
                                 
