@@ -54,63 +54,48 @@ struct HomeView: View {
                         
                         
                         HStack{
-                            Image("banana")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 100, height: 100)
-                                        .cornerRadius(10)
-                                )
-                            Image("add_green")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 30, height: 30)
-                                        .cornerRadius(10)
-                                )
-                            VStack(alignment: .leading){
-                                Text("Banana")
-                                    .font(.system(size: 17, weight: .medium))
-                                Text("Rs. 99")
-                                    .font(.system(size: 13))
-                            }
+                            VStack{
+                                
+                                
+                                Image("banana")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .overlay(
+                                        Rectangle()
+                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                            .frame(width: 110, height: 190)
+                                            .cornerRadius(10)
+                                    )
+                                
+                                VStack(alignment: .leading){
+                                    Text("Banana")
+                                        .font(.system(size: 17, weight: .medium))
+                                    Text("Rs. 99")
+                                        .font(.system(size: 13))
+                                }}
                             .padding()
-                            Image("apple_red")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 100, height: 100)
-                                        .cornerRadius(10)
-                                )
-                            Image("add_green")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 30, height: 30)
-                                        .cornerRadius(10)
-                                )
-                            
-                            VStack(alignment: .leading){
-                                Text("Apple Red")
-                                    .font(.system(size: 17, weight: .medium))
-                                Text("Rs. 169")
-                                    .font(.system(size: 13))
-                            }
-                            
-                            
-                        }
+                            VStack{ Image("apple_red")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .overlay(
+                                        Rectangle()
+                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                            .frame(width: 110, height: 190)
+                                            .cornerRadius(10)
+                                    )
+                                
+                                
+                                VStack(alignment: .leading){
+                                    Text("Apple Red")
+                                        .font(.system(size: 17, weight: .medium))
+                                    Text("Rs. 169")
+                                        .font(.system(size: 13))
+                                }
+                                
+                                
+                            }}
                         //testing
                     }
                     Spacer()
@@ -130,62 +115,49 @@ struct HomeView: View {
                         
                         
                         HStack{
-                            Image("bell_pepper_red")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 100, height: 100)
-                                        .cornerRadius(10)
-                                )
-                            Image("add_green")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 30, height: 30)
-                                        .cornerRadius(10)
-                                )
-                            VStack(alignment: .leading){
-                                Text("Bell Pepper\n- Red")
-                                    .font(.system(size: 17, weight: .medium))
-                                Text("Rs. 69")
-                                    .font(.system(size: 13))
+                            VStack{
+                                Image("bell_pepper_red")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .overlay(
+                                        Rectangle()
+                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                            .frame(width: 110, height: 190)
+                                            .cornerRadius(10)
+                                    )
+                                
+                                VStack(alignment: .leading){
+                                    Text("Bell Pepper\n- Red")
+                                        .font(.system(size: 17, weight: .medium))
+                                    Text("Rs. 69")
+                                        .font(.system(size: 13))
+                                }}
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            VStack{
+                                Image("ginger")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+                                    .overlay(
+                                        Rectangle()
+                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                            .frame(width: 110, height: 190)
+                                            .cornerRadius(10)
+                                    )
+                                
+                                
+                                VStack(alignment: .leading){
+                                    Text("Ginger")
+                                        .font(.system(size: 17, weight: .medium))
+                                    Text("Rs. 169")
+                                        .font(.system(size: 13))
+                                }}
+                                
+                                //testing
                             }
-                            Image("ginger")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 100, height: 100)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 100, height: 100)
-                                        .cornerRadius(10)
-                                )
-                            Image("add_green")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 20, height: 20)
-                                .overlay(
-                                    Rectangle()
-                                        .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
-                                        .frame(width: 30, height: 30)
-                                        .cornerRadius(10)
-                                )
-                            
-                            VStack(alignment: .leading){
-                                Text("Ginger")
-                                    .font(.system(size: 17, weight: .medium))
-                                Text("Rs. 169")
-                                    .font(.system(size: 13))
-                            }
-                            
-                            //testing
-                        }
                     }
                     Spacer()
                     Spacer()
