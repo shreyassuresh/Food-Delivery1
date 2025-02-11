@@ -80,7 +80,7 @@ struct HomeView: View {
                                 Text("Rs. 99")
                                     .font(.system(size: 13))
                             }
-                            
+                            .padding()
                             Image("apple_red")
                                 .resizable()
                                 .scaledToFit()
