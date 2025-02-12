@@ -81,7 +81,7 @@ struct HomeView: View {
                                     .frame(width: 100, height: 100)
                                     .overlay(
                                         Rectangle()
-                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                            .fill(Color.black.opacity(0.1))
                                             .frame(width: 110, height: 190)
                                             .cornerRadius(10)
                                     )
@@ -96,7 +96,7 @@ struct HomeView: View {
                                 
                                 
                             }}
-                        //testing
+                       
                     }
                     Spacer()
                     Spacer()
