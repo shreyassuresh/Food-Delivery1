@@ -45,14 +45,46 @@ struct HomeView2: View {
                        .resizable()
                        .scaledToFit()
                        .padding(.horizontal)
+                   Text("Exclusive Offers")
+                       .font(.headline)
+                       .padding(.leading)
                    
+                   ScrollView(.horizontal, showsIndicators: false){
+                       HStack{
+                           ForEach(products.suffix(2)){product in
+                               ProductView(product: product)
+                           }
+                        
+                       }
+                       .padding(.horizontal)
+                   }
+                   Text("Groceries")
+                       .font(.headline)
+                       .padding(.leading)
                        
                }
            }
+           .navigationBarTitle("Fresh Vegetable", displayMode: .inline)
         }
     }
 }
-
+struct ProductView:View{
+    let product: Product
+    var body: some View {
+        VStack(alignment: .leading){
+            Image(product.imageName)
+                .resizable()
+                .frame(width: 100, height: 100)
+                .scaledToFit()
+            Text(product.name)
+                .font(.caption)
+                .padding(.top, 5)
+            Text("\(product.price)")
+            
+        }
+        
+    }
+}
 #Preview {
     HomeView2()
 }
