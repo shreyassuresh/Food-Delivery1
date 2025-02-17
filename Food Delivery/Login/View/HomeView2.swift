@@ -23,7 +23,11 @@ struct HomeView2: View {
     var body: some View {
        NavigationView {
            ScrollView{
-               VStack(alignment: .leading, spacing: 20){
+               VStack{
+                   Image("color_logo")
+                       .resizable()
+                       .scaledToFit()
+                       .frame(width: 50)
                    HStack{
                        Spacer()
                        Image("location")
@@ -35,6 +39,14 @@ struct HomeView2: View {
                            .fontWeight(.bold)
                        Spacer()
                    }
+                   .padding()
+                   
+                   Image("banner_top")
+                       .resizable()
+                       .scaledToFit()
+                       .padding(.horizontal)
+                   
+                       
                }
            }
         }
