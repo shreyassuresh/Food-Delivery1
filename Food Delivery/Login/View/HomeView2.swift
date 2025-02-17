@@ -64,7 +64,7 @@ struct HomeView2: View {
                        
                }
            }
-           .navigationBarTitle("Fresh Vegetable", displayMode: .inline)
+           .navigationBarTitle("Nectar", displayMode: .inline)
         }
     }
 }
@@ -80,8 +80,19 @@ struct ProductView:View{
                 .font(.caption)
                 .padding(.top, 5)
             Text("\(product.price)")
-            
+                .font(.headline)
+                .foregroundColor(.green)
+            Button(action: {
+                
+            }) {
+                Image(systemName: "plus.circle.fill")
+                    .foregroundColor(.green)
+            }
+            .padding(.top,5)
         }
+        .padding()
+        .background(Color(.systemGray6))
+        .cornerRadius(10)
         
     }
 }
