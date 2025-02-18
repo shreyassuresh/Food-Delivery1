@@ -103,42 +103,57 @@ struct HomeView2: View {
                         .padding(.horizontal)
                     }
                     
-                    // Groceries Section
-                    HStack {
-                        Text("Groceries")
-                            .font(.system(size: 23, weight: .semibold))
-                        
-                        Spacer()
-                        
-                        Text("See all")
-                            .foregroundColor(.green)
-                    }
-                    .padding(.horizontal)
-                    
-                    ScrollView(.horizontal, showsIndicators: false) {
+                    // Groceries Section with Cool Background
+                    VStack {
                         HStack {
-                            Image("pulses")
-                                .resizable()
-                                .frame(width: 60, height: 60)
+                            Text("Groceries")
+                                .font(.system(size: 23, weight: .semibold))
+                                .padding(.trailing, 70)
                             
-                            VStack(alignment: .leading) {
-                                Text("Pulses")
-                                    .font(.system(size: 17, weight: .medium))
+                            Spacer()
+                            
+                            Text("See all")
+                                .foregroundColor(.green)
+                                .padding(.leading, 130)
+                        }
+                        .padding(.horizontal)
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack {
+                                // Pulses
+                                VStack {
+                                    Image("pulses")
+                                        .resizable()
+                                        .frame(width: 60, height: 60)
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text("Pulses")
+                                            .font(.system(size: 17, weight: .medium))
+                                    }
+                                    .padding()
+                                }
+                                
+                                // Rice
+                                VStack {
+                                    Image("rice")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .frame(width: 60, height: 60)
+                                        .padding(.leading, 130)
+                                    
+                                    VStack(alignment: .leading) {
+                                        Text("Rice")
+                                            .font(.system(size: 17, weight: .medium))
+                                    }
+                                    .padding()
+                                }
                             }
-                            .padding()
-                            
-                            Image("rice")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 60, height: 60)
-                            
-                            VStack(alignment: .leading) {
-                                Text("Rice")
-                                    .font(.system(size: 17, weight: .medium))
-                            }
-                            .padding()
                         }
                     }
+                    .padding()
+                    .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+                    .cornerRadius(20)
+                    .shadow(radius: 5)
                 }
             }
             .navigationBarTitle("Nectar", displayMode: .inline)
@@ -156,7 +171,6 @@ struct ProductView: View {
                 .frame(width: 100, height: 100)
                 .scaledToFit()
                 
-            
             VStack(alignment: .leading) {
                 Text(product.name)
                     .font(.system(size: 17, weight: .medium))
