@@ -11,7 +11,7 @@ struct HomeView2: View {
     @State private var searchQuery: String = ""
 
     let products = [
-        Product(name: "Organic Bananas", imageName: "banana", price: "100 Rs"),
+        Product(name: "Bananas", imageName: "banana", price: "100 Rs"),
         Product(name: "Red Apple", imageName: "apple_red", price: "120 Rs"),
         Product(name: "Bell Pepper", imageName: "bell_pepper_red", price: "100 Rs"),
         Product(name: "Ginger", imageName: "ginger", price: "120 Rs"),
@@ -123,7 +123,7 @@ struct HomeView2: View {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 // Pulses
-                                VStack {
+                                HStack {
                                     Image("pulses")
                                         .resizable()
                                         .frame(width: 60, height: 60)
@@ -133,7 +133,7 @@ struct HomeView2: View {
                                 .padding()
 
                                 // Rice
-                                VStack {
+                                HStack {
                                     Image("rice")
                                         .resizable()
                                         .frame(width: 60, height: 60)
@@ -145,14 +145,14 @@ struct HomeView2: View {
                                
                             }
                         }
-                        
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+                        .cornerRadius(20)
+                        .shadow(radius: 5)
                     }
                     
                    
                     .padding()
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
-                    .cornerRadius(20)
-                    .shadow(radius: 5)
+                    
                 }
                 ScrollView(.horizontal, showsIndicators: false){
                     
