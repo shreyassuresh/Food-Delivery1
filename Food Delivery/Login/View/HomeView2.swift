@@ -9,14 +9,16 @@ struct Product: Identifiable {
 
 struct HomeView2: View {
     @State private var searchQuery: String = ""
-    
+
     let products = [
         Product(name: "Organic Bananas", imageName: "banana", price: "100 Rs"),
         Product(name: "Red Apple", imageName: "apple_red", price: "120 Rs"),
         Product(name: "Bell Pepper", imageName: "bell_pepper_red", price: "100 Rs"),
         Product(name: "Ginger", imageName: "ginger", price: "120 Rs"),
+        Product(name: "Beef Bone", imageName: "beef_bone", price: "200 Rs"),
+        Product(name: "Broiler Chicken", imageName: "broiler_chicken", price: "180 Rs")
     ]
-    
+
     var body: some View {
         NavigationView {
             ScrollView {
@@ -26,7 +28,7 @@ struct HomeView2: View {
                         .resizable()
                         .scaledToFit()
                         .frame(width: 50)
-                    
+
                     HStack {
                         Image("location")
                             .resizable()
@@ -37,7 +39,7 @@ struct HomeView2: View {
                             .fontWeight(.bold)
                     }
                     .padding()
-                    
+
                     // Search Bar
                     HStack {
                         Image("search")
@@ -45,7 +47,7 @@ struct HomeView2: View {
                             .scaledToFit()
                             .frame(width: 18, height: 30)
                             .padding(.leading, 30)
-                        
+
                         TextField("Search here...", text: $searchQuery)
                             .padding(.leading, 7)
                             .background(Color.gray.opacity(0.1))
@@ -54,25 +56,25 @@ struct HomeView2: View {
                             .padding(.leading, 3)
                             .padding(.trailing, 30)
                     }
-                    
+
                     // Banner Image
                     Image("banner_top")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350)
-                    
+
                     // Exclusive Offers Section
                     HStack {
                         Text("Exclusive Offer")
                             .font(.system(size: 23, weight: .semibold))
-                        
+
                         Spacer()
-                        
+
                         Text("See all")
                             .foregroundColor(.green)
                     }
                     .padding(.horizontal)
-                    
+
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
                             ForEach(products.prefix(2)) { product in
@@ -81,43 +83,43 @@ struct HomeView2: View {
                         }
                         .padding(.horizontal)
                     }
-                    
+
                     // Best Selling Section
                     HStack {
                         Text("Best Selling")
                             .font(.system(size: 23, weight: .semibold))
-                        
+
                         Spacer()
-                        
+
                         Text("See all")
                             .foregroundColor(.green)
                     }
                     .padding(.horizontal)
-                    
+
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.suffix(2)) { product in
+                            ForEach(products.suffix(4).prefix(2)) { product in
                                 ProductView(product: product)
                             }
                         }
                         .padding(.horizontal)
                     }
-                    
+
                     // Groceries Section with Cool Background
                     VStack {
                         HStack {
                             Text("Groceries")
                                 .font(.system(size: 23, weight: .semibold))
                                 .padding(.trailing, 70)
-                            
+
                             Spacer()
-                            
+
                             Text("See all")
                                 .foregroundColor(.green)
-                                .padding(.leading, 130)
+                                .padding(.leading, 108)
                         }
                         .padding(.horizontal)
-                        
+
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 // Pulses
@@ -125,35 +127,42 @@ struct HomeView2: View {
                                     Image("pulses")
                                         .resizable()
                                         .frame(width: 60, height: 60)
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text("Pulses")
-                                            .font(.system(size: 17, weight: .medium))
-                                    }
-                                    .padding()
+                                    Text("Pulses")
+                                        .font(.system(size: 17, weight: .medium))
                                 }
-                                
+                                .padding()
+
                                 // Rice
                                 VStack {
                                     Image("rice")
                                         .resizable()
-                                        .scaledToFit()
                                         .frame(width: 60, height: 60)
-                                        .padding(.leading, 130)
-                                    
-                                    VStack(alignment: .leading) {
-                                        Text("Rice")
-                                            .font(.system(size: 17, weight: .medium))
-                                    }
-                                    .padding()
+                                    Text("Rice")
+                                        .font(.system(size: 17, weight: .medium))
                                 }
+                                .padding()
+
+                               
                             }
                         }
+                        
                     }
+                    
+                   
                     .padding()
                     .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
                     .cornerRadius(20)
                     .shadow(radius: 5)
+                }
+                ScrollView(.horizontal, showsIndicators: false){
+                    
+                 HStack{
+                    // Beef Bone
+                    ProductView(product: products[4])
+
+                    // Broiler Chicken
+                    ProductView(product: products[5])
+                }
                 }
             }
             .navigationBarTitle("Nectar", displayMode: .inline)
@@ -163,14 +172,14 @@ struct HomeView2: View {
 
 struct ProductView: View {
     let product: Product
-    
+
     var body: some View {
         VStack(alignment: .leading) {
             Image(product.imageName)
                 .resizable()
                 .frame(width: 100, height: 100)
                 .scaledToFit()
-                
+
             VStack(alignment: .leading) {
                 Text(product.name)
                     .font(.system(size: 17, weight: .medium))
@@ -178,7 +187,7 @@ struct ProductView: View {
                 Text(product.price)
                     .font(.system(size: 13))
             }
-            
+
             Button(action: {
                 // Add product to cart
             }) {
