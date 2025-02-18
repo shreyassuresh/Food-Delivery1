@@ -77,7 +77,7 @@ struct HomeView2: View {
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.prefix(2)) { product in
+                            ForEach(products.prefix(4)) { product in
                                 ProductView(product: product)
                             }
                         }
@@ -98,7 +98,7 @@ struct HomeView2: View {
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.suffix(4).prefix(2)) { product in
+                            ForEach(products.suffix(4).prefix(4)) { product in
                                 ProductView(product: product)
                             }
                         }
@@ -166,6 +166,7 @@ struct HomeView2: View {
                 }
             }
             .navigationBarTitle("Nectar", displayMode: .inline)
+            
         }
     }
 }
