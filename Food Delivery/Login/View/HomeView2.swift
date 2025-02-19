@@ -172,6 +172,7 @@ struct HomeView2: View {
                 .tag(Tab.explore)
                 .tabItem {
                     Image(systemName: "magnifyingglass")
+                    //update here
                     Text("Explore")
                 }
 
