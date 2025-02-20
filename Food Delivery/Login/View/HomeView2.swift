@@ -163,42 +163,71 @@ struct HomeView2: View {
             }
             .tag(Tab.shop)
             .tabItem {
-                Image(systemName: "house")
-                Text("Shop")
+                VStack {
+                    Image("store_tab")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 25, height: 25) // Resize tab icon
+                    Text("Shop")
+                }
+                .padding(.vertical, 5) // Add vertical padding for better spacing
             }
 
             // Explore Tab
             Text("Explore Content")
                 .tag(Tab.explore)
                 .tabItem {
-                    Image(systemName: "magnifyingglass")
-                    //update here
-                    Text("Explore")
+                    VStack {
+                        Image("explore_tab")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25) // Resize tab icon
+                        Text("Explore")
+                    }
+                    .padding(.vertical, 5) // Add vertical padding for better spacing
                 }
 
             // Cart Tab
             Text("Cart Content")
                 .tag(Tab.cart)
                 .tabItem {
-                    Image(systemName: "cart")
-                    Text("Cart")
+                    VStack {
+                        Image("cart_tab")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25) // Resize tab icon
+                        Text("Cart")
+                    }
+                    .padding(.vertical, 5) // Add vertical padding for better spacing
                 }
 
             // Favorite Tab
             Text("Favorite Content")
                 .tag(Tab.favorite)
                 .tabItem {
-                    Image(systemName: "heart")
-                    Text("Favorite")
+                    VStack {
+                        Image("fav_tab")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25) // Resize tab icon
+                        Text("Favorite")
+                    }
+                    .padding(.vertical, 5) // Add vertical padding for better spacing
                 }
 
             // Account Tab
             Text("Account Content")
                 .tag(Tab.account)
                 .tabItem {
-                    Image(systemName: "person")
-                    Text("Account")
-                }
+                    VStack {
+                        Image("account_tab")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 25, height: 25) // Resize tab icon
+                        Text("Account")
+                    }
+                    .padding(.vertical, 5) // Add vertical padding for better spacing
+            }
         }
     }
 }
