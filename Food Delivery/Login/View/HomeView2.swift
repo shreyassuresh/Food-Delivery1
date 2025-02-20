@@ -20,7 +20,7 @@ struct HomeView2: View {
     @State private var selectedTab: Tab = .shop
     
     let products = [
-        Product(name: "Organic Bananas", imageName: "banana", price: "100 Rs"),
+        Product(name: "Bananas", imageName: "banana", price: "100 Rs"),
         Product(name: "Red Apple", imageName: "apple_red", price: "120 Rs"),
         Product(name: "Bell Pepper", imageName: "bell_pepper_red", price: "100 Rs"),
         Product(name: "Ginger", imageName: "ginger", price: "120 Rs"),
@@ -108,7 +108,7 @@ struct HomeView2: View {
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.prefix(2)) { product in
+                            ForEach(products.prefix(4)) { product in
                                 ProductView(product: product)
                             }
                         }
@@ -129,7 +129,7 @@ struct HomeView2: View {
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.suffix(4).prefix(2)) { product in
+                            ForEach(products.suffix(4).prefix(4)) { product in
                                 ProductView(product: product)
                             }
                         }
@@ -229,6 +229,7 @@ struct CustomTabBarView: View {
 
     var body: some View {
         HStack {
+            
             TabBarItem(imageName: "store_tab", title: "Shop", isSelected: selectedTab == .shop)
                 .onTapGesture {
                     selectedTab = .shop
