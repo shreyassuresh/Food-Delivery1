@@ -138,7 +138,7 @@ struct HomeView2: View {
                     }
 
                     // Groceries Section with Cool Background
-                    VStack {
+                    
                         HStack {
                             Text("Groceries")
                                 .font(.system(size: 23, weight: .semibold))
@@ -151,11 +151,11 @@ struct HomeView2: View {
                                 .padding(.leading, 108)
                         }
                         .padding(.horizontal)
-
+                VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack {
                                 // Pulses
-                                VStack {
+                                HStack {
                                     Image("pulses")
                                         .resizable()
                                         .frame(width: 60, height: 60)
@@ -165,7 +165,7 @@ struct HomeView2: View {
                                 .padding()
 
                                 // Rice
-                                VStack {
+                                HStack {
                                     Image("rice")
                                         .resizable()
                                         .frame(width: 60, height: 60)
