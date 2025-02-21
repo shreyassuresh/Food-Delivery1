@@ -151,40 +151,68 @@ struct HomeView2: View {
                                 .padding(.leading, 108)
                         }
                         .padding(.horizontal)
-                VStack {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                // Pulses
-                                HStack {
-                                    Image("pulses")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                    Text("Pulses")
-                                        .font(.system(size: 17, weight: .medium))
-                                }
-                                .padding()
-
-                                // Rice
-                                HStack {
-                                    Image("rice")
-                                        .resizable()
-                                        .frame(width: 60, height: 60)
-                                    Text("Rice")
-                                        .font(.system(size: 17, weight: .medium))
-                                }
-                                .padding()
-                               
-                               
-                            }
-                            
-                        }
-                       
-                    }
+//                VStack {
+//                    ScrollView(.horizontal, showsIndicators: false) {
+//                        HStack {
+//                            HStack{
+//                                
+//                           
+//                            Image("pulses")
+//                                .resizable()
+//                                .frame(width: 60, height: 60)
+//                            VStack(alignment: .leading) {
+//                                Text("Pulses")
+//                                    .font(.system(size: 17, weight: .medium))
+//                                    .padding() // add some padding to the text
+//                                    
+//                            }
+//                            .overlay(
+//                                Rectangle()
+//                                    .fill(LinearGradient(gradient: Gradient(colors: [Color.pink.opacity(0.1), Color.red.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+//                                    .cornerRadius(20)
+//                                    .frame(width:290,height:110)
+//                                
+//                            )
+//                            }
+//                            HStack{
+//                                Image("rice")
+//                                    .resizable()
+//                                    .scaledToFit()
+//                                    .frame(width: 60, height: 60)
+//                                    .padding(.leading, 130)
+//                                VStack(alignment: .leading) {
+//                                    Text("Rice")
+//                                        .font(.system(size: 17, weight: .medium))
+//                                        .padding() // add padding here as well
+//                                        
+//                                }
+//                                .background(
+//                                    Rectangle()
+//                                        .fill(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+//                                        .cornerRadius(20)
+//                                    
+//                                )
+//                            }
+//                        }
+//                    }
+//                       
+//                    }
                
-                    .padding()
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+                ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 10) {
+                                // Use the ItemView defined in the separate file
+                                ItemView(title: "Pulses", imageName: "pulses")
+                                ItemView(title: "Rice", imageName: "rice")
+                                // Add more items as needed
+                            }
+                            .padding(10)
+                        }
+//                    .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
                     .cornerRadius(20)
-                    .shadow(radius: 5)
+//                    .frame(width: 200, height:100)
+
+                
+                
                 ScrollView(.horizontal, showsIndicators: false) {
                     VStack {
                         HStack
