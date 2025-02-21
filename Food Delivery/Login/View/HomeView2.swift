@@ -68,7 +68,7 @@ struct HomeView2: View {
                         .font(.headline)
                         .fontWeight(.bold)
                 }
-                .padding()
+                .padding(.top, -5)
 
                 // Search Bar
                 HStack {
@@ -81,8 +81,8 @@ struct HomeView2: View {
                     TextField("Search here...", text: $searchQuery)
                         .padding(.leading, 7)
                         .background(Color.gray.opacity(0.1))
-                        .cornerRadius(7)
-                        .frame(height: 45)
+                        .cornerRadius(10)
+                        .frame(height: 10)
                         .padding(.leading, 3)
                         .padding(.trailing, 30)
                 }
@@ -173,20 +173,33 @@ struct HomeView2: View {
                                         .font(.system(size: 17, weight: .medium))
                                 }
                                 .padding()
-
-                                // Beef Bone
-                                ProductView(product: products[4])
-
-                                // Broiler Chicken
-                                ProductView(product: products[5])
+                               
+                               
                             }
+                            
                         }
+                       
                     }
+               
                     .padding()
                     .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
                     .cornerRadius(20)
                     .shadow(radius: 5)
+                ScrollView(.horizontal, showsIndicators: false) {
+                    VStack {
+                        HStack
+                        {
+                            // Beef Bone
+                            ProductView(product: products[4])
+                            
+                            // Broiler Chicken
+                            ProductView(product: products[5])
+                        }
+                        
+                    }
                 }
+                }
+               
             }
            
         }
