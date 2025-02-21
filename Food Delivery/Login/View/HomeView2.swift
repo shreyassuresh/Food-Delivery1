@@ -52,41 +52,42 @@ struct HomeView2: View {
     
     var shopTabContent: some View {
         NavigationView {
-            ScrollView {
-                VStack {
-                    // Logo and Location
-                    Image("color_logo")
+            VStack {
+                // Logo and Location
+                Image("color_logo")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 50)
+
+                HStack {
+                    Image("location")
                         .resizable()
                         .scaledToFit()
-                        .frame(width: 50)
+                        .frame(width: 20, height: 30)
+                    Text("Vadodara, India")
+                        .font(.headline)
+                        .fontWeight(.bold)
+                }
+                .padding()
 
-                    HStack {
-                        Image("location")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 20, height: 30)
-                        Text("Vadodara, India")
-                            .font(.headline)
-                            .fontWeight(.bold)
-                    }
-                    .padding()
+                // Search Bar
+                HStack {
+                    Image("search")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 18, height: 30)
+                        .padding(.leading, 30)
 
-                    // Search Bar
-                    HStack {
-                        Image("search")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 18, height: 30)
-                            .padding(.leading, 30)
-
-                        TextField("Search here...", text: $searchQuery)
-                            .padding(.leading, 7)
-                            .background(Color.gray.opacity(0.1))
-                            .cornerRadius(7)
-                            .frame(height: 45)
-                            .padding(.leading, 3)
-                            .padding(.trailing, 30)
-                    }
+                    TextField("Search here...", text: $searchQuery)
+                        .padding(.leading, 7)
+                        .background(Color.gray.opacity(0.1))
+                        .cornerRadius(7)
+                        .frame(height: 45)
+                        .padding(.leading, 3)
+                        .padding(.trailing, 30)
+                }
+            ScrollView {
+                
 
                     // Banner Image
                     Image("banner_top")
@@ -187,7 +188,7 @@ struct HomeView2: View {
                     .shadow(radius: 5)
                 }
             }
-            .navigationBarTitle("Nectar", displayMode: .inline)
+           
         }
     }
 }
@@ -219,7 +220,8 @@ struct ProductView: View {
             .padding(.top, 5)
         }
         .padding()
-        .background(Color(.systemGray6))
+        .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(0.1), Color.green.opacity(0.1)]), startPoint: .top, endPoint: .bottom))
+        
         .cornerRadius(10)
     }
 }

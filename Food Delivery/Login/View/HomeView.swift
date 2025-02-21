@@ -175,9 +175,10 @@ struct HomeView: View {
                                                                     .frame(width: 20, height: 20)
                                                                     .overlay(
                                                                         Rectangle()
-                                                                            .fill(Color.black.opacity(0.1)) // Semi-transparent rectangle
+                                                                            .fill(Color.black.opacity(0)) // Semi-transparent rectangle
                                                                             .frame(width: 30, height: 30)
                                                                             .cornerRadius(10)
+                                                                            .padding(5)
                                                                     )
                                 }}
                                 
