@@ -86,35 +86,42 @@ struct HomeView2: View {
                         .padding(.leading, 3)
                         .padding(.trailing, 30)
                 }
-            ScrollView {
-                
-
+                ScrollView {
+                    
+                    
                     // Banner Image
                     Image("banner_top")
                         .resizable()
                         .scaledToFit()
                         .frame(width: 350)
-
+                    
                     // Exclusive Offers Section
                     HStack {
                         Text("Exclusive Offer")
                             .font(.system(size: 23, weight: .semibold))
-
+                        
                         Spacer()
-
+                        
                         Text("See all")
                             .foregroundColor(.green)
                     }
                     .padding(.horizontal)
-
+                    
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.prefix(4)) { product in
-                                ProductView(product: product)
-                            }
-                        }
-                        .padding(.horizontal)
+                            ProductDetailView(name: "Organic Bananas", imageName: "banana", quantity: "7pcs", price: "90")
+                            ProductDetailView(name: "Red Apple", imageName: "apple_red", quantity: "3pcs", price: "110")
+                            ProductDetailView(name: "Ginger", imageName: "ginger", quantity: "250gm", price: "30")
+                            ProductDetailView(name: "Bell Pepper Red", imageName: "bell_pepper_red", quantity: "1kg", price: "50")
+                           
+                                .padding()
+                                .frame(height:250)
+                            
+                            Spacer()
+                        
                     }
+                    .padding(.horizontal)
+                }
 
                     // Best Selling Section
                     HStack {
@@ -130,10 +137,14 @@ struct HomeView2: View {
 
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ForEach(products.suffix(4).prefix(4)) { product in
-                                ProductView(product: product)
+                            ProductDetailView(name: "Bell Pepper Red", imageName: "bell_pepper_red", quantity: "1kg", price: "50")
+                            ProductDetailView(name: "Ginger", imageName: "ginger", quantity: "250gm", price: "30")
+                                .padding()
+                                .frame(height:250)
+                            
+                            Spacer()
                             }
-                        }
+                        
                         .padding(.horizontal)
                     }
 
@@ -199,9 +210,11 @@ struct HomeView2: View {
 //                    }
                
                 ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 10) {
+                            HStack(spacing: 15) {
                                 // Use the ItemView defined in the separate file
-                                ItemView(title: "Pulses", imageName: "pulses")
+                                ItemView(title: "Pulses", imageName: "pulses"
+                                )
+                                   
                                 ItemView(title: "Rice", imageName: "rice")
                                 // Add more items as needed
                             }
@@ -217,15 +230,19 @@ struct HomeView2: View {
                     VStack {
                         HStack
                         {
-                            // Beef Bone
-                            ProductView(product: products[4])
+                            ProductDetailView(name: "Beef Bone", imageName: "beef_bone", quantity: "1kg", price: "400")
+                            ProductDetailView(name: "Broiler Chicken", imageName: "broiler_chicken", quantity: "1kg", price: "200")
+                                .padding()
+                                .frame(height:250)
                             
-                            // Broiler Chicken
-                            ProductView(product: products[5])
+                            Spacer()
+                            }
+                        
+                        .padding(.horizontal)
                         }
                         
                     }
-                }
+                
                 }
                
             }
