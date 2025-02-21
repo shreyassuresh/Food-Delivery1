@@ -29,6 +29,8 @@
 		3FD054772D4E5A8200D722F3 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD054762D4E5A8200D722F3 /* HomeView.swift */; };
 		3FE293C12D68912F0093BDC5 /* GroceriesItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE293C02D68912F0093BDC5 /* GroceriesItemView.swift */; };
 		3FE293C42D6894520093BDC5 /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE293C32D6894520093BDC5 /* ProductView.swift */; };
+		3FE293C62D68B5850093BDC5 /* ProductsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE293C52D68B5850093BDC5 /* ProductsDetailView.swift */; };
+		3FE293C82D68BB510093BDC5 /* HeartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FE293C72D68BB510093BDC5 /* HeartButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +57,8 @@
 		3FD054762D4E5A8200D722F3 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		3FE293C02D68912F0093BDC5 /* GroceriesItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroceriesItemView.swift; sourceTree = "<group>"; };
 		3FE293C32D6894520093BDC5 /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
+		3FE293C52D68B5850093BDC5 /* ProductsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetailView.swift; sourceTree = "<group>"; };
+		3FE293C72D68BB510093BDC5 /* HeartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +170,8 @@
 			children = (
 				3FE293C02D68912F0093BDC5 /* GroceriesItemView.swift */,
 				3FE293C32D6894520093BDC5 /* ProductView.swift */,
+				3FE293C52D68B5850093BDC5 /* ProductsDetailView.swift */,
+				3FE293C72D68BB510093BDC5 /* HeartButtonView.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -261,6 +267,7 @@
 				3F95566A2D314E0300263D0F /* Food_DeliveryApp.swift in Sources */,
 				3FE293C12D68912F0093BDC5 /* GroceriesItemView.swift in Sources */,
 				3FE293C42D6894520093BDC5 /* ProductView.swift in Sources */,
+				3FE293C62D68B5850093BDC5 /* ProductsDetailView.swift in Sources */,
 				3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */,
 				3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */,
 				3F90A0092D44E0610041191C /* LineTextField.swift in Sources */,
@@ -268,6 +275,7 @@
 				3F3232832D3BD23200E9D24F /* UIExtension.swift in Sources */,
 				3F6D18422D43A0060096BCB4 /* MainViewModel.swift in Sources */,
 				3F90A0062D44DDF90041191C /* UserModel.swift in Sources */,
+				3FE293C82D68BB510093BDC5 /* HeartButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,14 +19,6 @@ struct HomeView2: View {
     @State private var searchQuery: String = ""
     @State private var selectedTab: Tab = .shop
     
-    let products = [
-        Product(name: "Bananas", imageName: "banana", price: "100 Rs"),
-        Product(name: "Red Apple", imageName: "apple_red", price: "120 Rs"),
-        Product(name: "Bell Pepper", imageName: "bell_pepper_red", price: "100 Rs"),
-        Product(name: "Ginger", imageName: "ginger", price: "120 Rs"),
-        Product(name: "Beef Bone", imageName: "beef_bone", price: "200 Rs"),
-        Product(name: "Broiler Chicken", imageName: "broiler_chicken", price: "180 Rs")
-    ]
     
     var body: some View {
         VStack {
