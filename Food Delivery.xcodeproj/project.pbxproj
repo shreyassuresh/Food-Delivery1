@@ -14,6 +14,7 @@
 		3F3A8A282D411A61006288C0 /* iPhoneNumberField in Frameworks */ = {isa = PBXBuildFile; productRef = 3F3A8A272D411A61006288C0 /* iPhoneNumberField */; };
 		3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F46667E2D3E883700D79C18 /* SignUpView.swift */; };
 		3F4CB9292D635838001EC891 /* HomeView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F4CB9282D635838001EC891 /* HomeView2.swift */; };
+		3F6A7A0E2D69C4E70077D17E /* BananaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6A7A0D2D69C4E70077D17E /* BananaView.swift */; };
 		3F6D18422D43A0060096BCB4 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F6D18412D43A0060096BCB4 /* MainViewModel.swift */; };
 		3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F73E2CC2D3E661F007EE633 /* LoginView.swift */; };
 		3F90A0032D44BCEC0041191C /* Globs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F90A0022D44BCEC0041191C /* Globs.swift */; };
@@ -40,6 +41,7 @@
 		3F34BB3C2D3FB3D70054544E /* CountryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
 		3F46667E2D3E883700D79C18 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		3F4CB9282D635838001EC891 /* HomeView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView2.swift; sourceTree = "<group>"; };
+		3F6A7A0D2D69C4E70077D17E /* BananaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BananaView.swift; sourceTree = "<group>"; };
 		3F6D18412D43A0060096BCB4 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		3F73E2CC2D3E661F007EE633 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		3F90A0022D44BCEC0041191C /* Globs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globs.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				3F4CB9282D635838001EC891 /* HomeView2.swift */,
 				3FD054762D4E5A8200D722F3 /* HomeView.swift */,
 				3FE293C22D68929A0093BDC5 /* Items */,
+				3F6A7A0D2D69C4E70077D17E /* BananaView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				3F95566C2D314E0300263D0F /* WelcomeView.swift in Sources */,
 				3F95566A2D314E0300263D0F /* Food_DeliveryApp.swift in Sources */,
 				3FE293C12D68912F0093BDC5 /* GroceriesItemView.swift in Sources */,
+				3F6A7A0E2D69C4E70077D17E /* BananaView.swift in Sources */,
 				3FE293C42D6894520093BDC5 /* ProductView.swift in Sources */,
 				3FE293C62D68B5850093BDC5 /* ProductsDetailView.swift in Sources */,
 				3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */,

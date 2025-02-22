@@ -101,8 +101,31 @@ struct HomeView2: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            ProductDetailView(name: "Organic Bananas", imageName: "banana", quantity: "7pcs", price: "90")
-                            ProductDetailView(name: "Red Apple", imageName: "apple_red", quantity: "3pcs", price: "110")
+                            NavigationLink(destination: ProductsDetailView(
+                                       name: "Organic Bananas",
+                                       imageName: "banana",
+                                       quantity: "7pcs",
+                                       price: "90",
+                                       description: "Fresh organic bananas.",
+                                       nutritionInfo: "Calories: 90, Fat: 0.3g, Carbs: 23g",
+                                       rating: 4.5)) {
+                                       
+                                       ProductDetailView(name: "Organic Bananas", imageName: "banana", quantity: "7pcs", price: "90")
+                                   }
+                            NavigationLink(destination: ProductsDetailView(
+                                    name: "Natural Red Apple",
+                                    imageName: "apple",
+                                    quantity: "3",
+                                    price: "110",  // Price per item
+                                    description: "Apples Are Nutritious. Apples May Be Good For Weight Loss. Apples May Be Good For Your Heart. As Part Of A Healthful And Varied Diet.",
+                                    nutritionInfo: "Calories: 52, Fat: 0.2g, Carbs: 14g, Fiber: 2.4g",
+                                    rating: 5
+                                )) {
+                                       
+                                           ProductDetailView(name: "Red Apple", imageName: "apple_red", quantity: "3pcs", price: "110")
+                                   }
+
+                           
                             ProductDetailView(name: "Ginger", imageName: "ginger", quantity: "250gm", price: "30")
                             ProductDetailView(name: "Bell Pepper Red", imageName: "bell_pepper_red", quantity: "1kg", price: "50")
                            
