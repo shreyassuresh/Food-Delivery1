@@ -24,6 +24,7 @@ struct HomeView2: View {
     @State private var selectedTab: Tab = .shop
     
     
+    
     var body: some View {
         VStack {
             // Main content area based on selectedTab
@@ -115,6 +116,7 @@ struct HomeView2: View {
                                        rating: 4.5)) {
                                        
                                        ProductDetailView(name: "Organic Bananas", imageName: "banana", quantity: "7pcs", price: "90")
+                                          
                                    }
                             NavigationLink(destination: ProductsDetailView(
                                     name: "Natural Red Apple",

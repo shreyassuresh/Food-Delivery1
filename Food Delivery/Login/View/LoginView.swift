@@ -110,9 +110,7 @@ struct LoginView: View {
                 .padding()
                 .padding(.bottom, -40)
                 
-                Button {
-                   // mainVM.serviceCallLogin()
-                } label: {
+                NavigationLink(destination: HomeView2()){
                     Text("Login")
                         .font(.custom("YourCustomFont", size: 18))
                         .foregroundColor(.white)

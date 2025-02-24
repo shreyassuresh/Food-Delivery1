@@ -5,15 +5,25 @@ struct ProductDetailView: View {
     var imageName: String
     var quantity: String
     var price: String
+    @State private var isHeartFilled: Bool = false
+   
+    
+    
+    
+
 
     var body: some View {
         VStack(alignment: .leading) {
             // Image Section
-            Image(imageName)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 100,height: 100)
-                .cornerRadius(10)
+            HStack{
+                Image(imageName)
+                   .resizable()
+                   .aspectRatio(contentMode: .fit)
+                   .frame(width: 100,height: 100)
+                   .cornerRadius(10)
+                HeartButton(isHeartFilled: $isHeartFilled)
+                    .padding(.top, -50)
+            }
 
             // Product Details Section
             VStack(alignment: .leading, spacing: 5) {
@@ -59,5 +69,6 @@ struct ProductDetailView: View {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailView(name: "Organic Bananas", imageName: "banana", quantity: "7pcs", price: "90")
+       
     }
 }
