@@ -25,9 +25,10 @@ struct HomeView2: View {
     
     
     
+    
     var body: some View {
         VStack {
-            // Main content area based on selectedTab
+           
             switch selectedTab {
             case .shop:
                 shopTabContent
@@ -106,18 +107,18 @@ struct HomeView2: View {
                     
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack {
-                            NavigationLink(destination: ProductsDetailView(
-                                       name: "Organic Bananas",
-                                       imageName: "banana",
-                                       quantity: "7pcs",
-                                       price: "90",
-                                       description: "Fresh organic bananas.",
-                                       nutritionInfo: "Calories: 90, Fat: 0.3g, Carbs: 23g",
-                                       rating: 4.5)) {
+//                            NavigationLink(destination: ProductsDetailView(
+//                                       name: "Organic Bananas",
+//                                       imageName: "banana",
+//                                       quantity: "7pcs",
+//                                       price: "90",
+//                                       description: "Fresh organic bananas.",
+//                                       nutritionInfo: "Calories: 90, Fat: 0.3g, Carbs: 23g",
+//                                       rating: 4.5)) {
                                        
                                        ProductDetailView(name: "Organic Bananas", imageName: "banana", quantity: "7pcs", price: "90")
                                           
-                                   }
+//                                   }
                             NavigationLink(destination: ProductsDetailView(
                                     name: "Natural Red Apple",
                                     imageName: "apple",

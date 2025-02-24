@@ -6,7 +6,7 @@ struct ProductDetailView: View {
     var quantity: String
     var price: String
     @State private var isHeartFilled: Bool = false
-   
+    
     
     
     
