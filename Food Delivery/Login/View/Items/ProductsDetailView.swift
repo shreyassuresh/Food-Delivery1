@@ -10,7 +10,7 @@ struct ProductsDetailView: View {
     var rating: Double
 
     @State private var selectedQuantity: Int = 1
-    @State private var isHeartFilled: Bool = false // Track heart state (filled or empty)
+    @State private var isHeartFilled: Bool = false
 
     var body: some View {
         ScrollView {
@@ -28,7 +28,6 @@ struct ProductsDetailView: View {
                         .font(.largeTitle)
                         .fontWeight(.bold)
 
-                    // Convert price from string to Double for calculation
                     let unitPrice = Double(price) ?? 0
                     let totalPrice = unitPrice * Double(selectedQuantity)
 
@@ -44,7 +43,7 @@ struct ProductsDetailView: View {
                             }
                         }) {
                             Image(systemName: "minus.circle.fill")
-                                .foregroundColor(.green)
+                                .foregroundColor(Color.primaryApp)
                         }
 
                         Text("\(selectedQuantity)")
