@@ -33,7 +33,7 @@ struct HomeView2: View {
             case .shop:
                 shopTabContent
             case .explore:
-                Text("Explore Content")
+                ExploreView()
             case .cart:
                 Text("Cart Content")
             case .favorite:
