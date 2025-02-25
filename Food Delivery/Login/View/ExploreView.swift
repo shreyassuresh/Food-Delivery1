@@ -4,16 +4,17 @@ struct Category: Identifiable {
     let id = UUID()
     let imageName: String
     let title: String
+    let backgroundColor: Color
 }
 
 struct ExploreView: View {
     let categories = [
-        Category(imageName: "frash_fruits", title: "Fresh Fruits & Vegetable"),
-        Category(imageName: "cooking_oil", title: "Cooking Oil & Ghee"),
-        Category(imageName: "meat_fish", title: "Meat & Fish"),
-        Category(imageName: "bakery_snacks", title: "Bakery & Snacks"),
-        Category(imageName: "dairy_eggs", title: "Dairy & Eggs"),
-        Category(imageName: "beverages", title: "Beverages")
+        Category(imageName: "fruits_vegetables", title: "Fresh Fruits & Vegetable", backgroundColor: .green.opacity(0.2)),
+              Category(imageName: "cooking_oil", title: "Cooking Oil & Ghee", backgroundColor: .yellow.opacity(0.2)),
+              Category(imageName: "meat_fish", title: "Meat & Fish", backgroundColor: .red.opacity(0.2)),
+              Category(imageName: "bakery_snacks", title: "Bakery & Snacks", backgroundColor: .purple.opacity(0.2)),
+              Category(imageName: "dairy_eggs", title: "Dairy & Eggs", backgroundColor: .blue.opacity(0.2)),
+              Category(imageName: "beverages", title: "Beverages", backgroundColor: .orange.opacity(0.2))
     ]
     
     var body: some View {
@@ -39,7 +40,7 @@ struct ExploreView: View {
         ScrollView {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 20) {
                 ForEach(categories) { category in
-                    CategoryView(category: category)
+                    CategoryBoxView(imageName: category.imageName, title: category.title, backgroundColor: category.backgroundColor)
                 }
             }
             .padding()
