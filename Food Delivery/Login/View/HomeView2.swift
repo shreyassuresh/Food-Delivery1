@@ -311,7 +311,6 @@ struct CustomTabBarView: View {
 
     var body: some View {
         HStack {
-            
             TabBarItem(imageName: "store_tab", title: "Shop", isSelected: selectedTab == .shop)
                 .onTapGesture {
                     selectedTab = .shop
@@ -350,14 +349,16 @@ struct TabBarItem: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 24, height: 24)
-                .foregroundColor(isSelected ? .blue : .gray)
+                .foregroundColor(isSelected ? .green : .black) // Use green for selected, black for unselected
             Text(title)
                 .font(.system(size: 10))
-                .foregroundColor(isSelected ? .blue : .gray)
+                .foregroundColor(isSelected ? .green : .black) // Use green for selected, black for unselected
         }
         .padding(.horizontal, 20)
     }
 }
+
+
 
 struct HomeView2_Previews: PreviewProvider {
     static var previews: some View {

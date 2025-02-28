@@ -8,14 +8,14 @@ struct Category: Identifiable {
 }
 
 struct ExploreView: View {
-    let categories = [
-        Category(imageName: "fruits_vegetables", title: "Fresh Fruits & Vegetable", backgroundColor: .green.opacity(0.2)),
-        Category(imageName: "cooking_oil", title: "Cooking Oil & Ghee", backgroundColor: .yellow.opacity(0.2)),
-        Category(imageName: "meat_fish", title: "Meat & Fish", backgroundColor: .red.opacity(0.2)),
-        Category(imageName: "bakery_snacks", title: "Bakery & Snacks", backgroundColor: .purple.opacity(0.2)),
-        Category(imageName: "dairy_eggs", title: "Dairy & Eggs", backgroundColor: .blue.opacity(0.2)),
-        Category(imageName: "beverages", title: "Beverages", backgroundColor: .orange.opacity(0.2))
-    ]
+//    let categories = [
+//        Category(imageName: "fruits_vegetables", title: "Fresh Fruits & Vegetable", backgroundColor: .green.opacity(0.2)),
+//        Category(imageName: "cooking_oil", title: "Cooking Oil & Ghee", backgroundColor: .yellow.opacity(0.2)),
+//        Category(imageName: "meat_fish", title: "Meat & Fish", backgroundColor: .red.opacity(0.2)),
+//        Category(imageName: "bakery_snacks", title: "Bakery & Snacks", backgroundColor: .purple.opacity(0.2)),
+//        Category(imageName: "dairy_eggs", title: "Dairy & Eggs", backgroundColor: .blue.opacity(0.2)),
+//        Category(imageName: "beverages", title: "Beverages", backgroundColor: .orange.opacity(0.2))
+//    ]
     
     var body: some View {
         VStack {
@@ -40,17 +40,17 @@ struct ExploreView: View {
         ScrollView {
             VStack{
                 HStack(spacing: 20) {
-                    CategoryBoxView(imageName: "frash_fruits", title: "Fresh Fruits & Vegetable", backgroundColor: .green.opacity(0.1))
-                    CategoryBoxView(imageName: "cooking_oil", title: "Cooking Oil & Ghee", backgroundColor: .pink.opacity(0.1))
+                    CategoryBoxView(imageName: "frash_fruits", title: "Fresh Fruits \n& Vegetable", backgroundColor: .green.opacity(0.2))
+                    CategoryBoxView(imageName: "cooking_oil", title: "Cooking Oil \n    & Ghee ", backgroundColor: .pink.opacity(0.3))
                 }
                 
                 HStack(spacing: 20) {
-                    CategoryBoxView(imageName: "meat_fish", title: "Meat & Fish", backgroundColor: .brown.opacity(0.1))
-                    CategoryBoxView(imageName: "cooking_oil", title: "Fresh Fruits & Vegetable", backgroundColor: .red.opacity(0.1))
+                    CategoryBoxView(imageName: "meat_fish", title: "Meat & Fish", backgroundColor: .brown.opacity(0.3))
+                    CategoryBoxView(imageName: "bakery_snacks", title: "Bakery & Snacks", backgroundColor: .red.opacity(0.3))
                 }
                 HStack(spacing: 20) {
-                    CategoryBoxView(imageName: "meat_fish", title: "Meat & Fish", backgroundColor: .brown.opacity(0.1))
-                    CategoryBoxView(imageName: "cooking_oil", title: "Fresh Fruits & Vegetable", backgroundColor: .red.opacity(0.1))
+                    CategoryBoxView(imageName: "dairy_eggs", title: "Dairy & Eggs", backgroundColor: .brown.opacity(0.3))
+                    CategoryBoxView(imageName: "beverages", title: "Beverages", backgroundColor: .red.opacity(0.3))
                 }
                 
             }
@@ -78,6 +78,7 @@ struct CategoryView: View {
                 .padding(.top, 5)
         }
         .padding()
+        .frame(width: 160, height: 200)
         .background(Color.white)
         .cornerRadius(15)
         .shadow(radius: 5)
