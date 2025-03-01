@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3F0C7FFA2D3A891900443AE8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C7FF92D3A891900443AE8 /* SignInView.swift */; };
+		3F3208082D731FA900B12D32 /* BeverageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3208072D731FA900B12D32 /* BeverageView.swift */; };
 		3F3232832D3BD23200E9D24F /* UIExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3232822D3BD23200E9D24F /* UIExtension.swift */; };
 		3F34BB382D3FB08B0054544E /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34BB372D3FB08B0054544E /* Country.swift */; };
 		3F34BB3D2D3FB3D70054544E /* CountryPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F34BB3C2D3FB3D70054544E /* CountryPickerView.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		3F0C7FF92D3A891900443AE8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		3F3208072D731FA900B12D32 /* BeverageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageView.swift; sourceTree = "<group>"; };
 		3F3232822D3BD23200E9D24F /* UIExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIExtension.swift; sourceTree = "<group>"; };
 		3F34BB372D3FB08B0054544E /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
 		3F34BB3C2D3FB3D70054544E /* CountryPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryPickerView.swift; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			children = (
 				3FED93332D6D98350056C4D2 /* ExploreView.swift */,
 				3FED93362D6D9F080056C4D2 /* CategoryBoxView.swift */,
+				3F3208072D731FA900B12D32 /* BeverageView.swift */,
 			);
 			path = ExploreTab;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				3F4CB9292D635838001EC891 /* HomeView2.swift in Sources */,
 				3F34BB382D3FB08B0054544E /* Country.swift in Sources */,
 				3F0C7FFA2D3A891900443AE8 /* SignInView.swift in Sources */,
+				3F3208082D731FA900B12D32 /* BeverageView.swift in Sources */,
 				3FF44F762D71CF6100E3CA48 /* ShopTabItem.swift in Sources */,
 				3F34BB3D2D3FB3D70054544E /* CountryPickerView.swift in Sources */,
 				3FD054772D4E5A8200D722F3 /* HomeView.swift in Sources */,
