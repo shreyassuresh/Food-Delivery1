@@ -50,7 +50,11 @@ struct ExploreView: View {
                 }
                 HStack(spacing: 20) {
                     CategoryBoxView(imageName: "dairy_eggs", title: "Dairy & Eggs", backgroundColor: .brown.opacity(0.3))
-                    CategoryBoxView(imageName: "beverages", title: "Beverages", backgroundColor: .red.opacity(0.3))
+                    
+                    NavigationLink (destination: BeverageView()){
+                        CategoryBoxView(imageName: "beverages", title: "Beverages", backgroundColor: .red.opacity(0.3))
+                    }
+                    
                 }
                 
             }

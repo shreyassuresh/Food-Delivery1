@@ -8,7 +8,7 @@ struct Beverage: Identifiable {
     let price: String
 }
 
-struct ContentView: View {
+struct BeverageView: View {
     let beverages = [
         Beverage(name: "Diet Coke", imageName: "diet_coke", volume: "355ml", price: "$1.99"),
         Beverage(name: "Sprite Can", imageName: "sprite_can", volume: "325ml", price: "$1.50"),
@@ -63,8 +63,8 @@ struct BeverageRow: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct BeverageView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        BeverageView()
     }
 }
