@@ -306,28 +306,30 @@ struct ProductView: View {
     }
 }
 
+import SwiftUI
+
 struct CustomTabBarView: View {
     @Binding var selectedTab: Tab
 
     var body: some View {
         HStack {
-            TabBarItem(imageName: "store_tab", title: "Shop", isSelected: selectedTab == .shop)
+            TabBarItem(systemImageName: "cart", title: "Shop", isSelected: selectedTab == .shop)
                 .onTapGesture {
                     selectedTab = .shop
                 }
-            TabBarItem(imageName: "explore_tab", title: "Explore", isSelected: selectedTab == .explore)
+            TabBarItem(systemImageName: "magnifyingglass", title: "Explore", isSelected: selectedTab == .explore)
                 .onTapGesture {
                     selectedTab = .explore
                 }
-            TabBarItem(imageName: "cart_tab", title: "Cart", isSelected: selectedTab == .cart)
+            TabBarItem(systemImageName: "bag", title: "Cart", isSelected: selectedTab == .cart)
                 .onTapGesture {
                     selectedTab = .cart
                 }
-            TabBarItem(imageName: "fav_tab", title: "Favorite", isSelected: selectedTab == .favorite)
+            TabBarItem(systemImageName: "heart", title: "Favorite", isSelected: selectedTab == .favorite)
                 .onTapGesture {
                     selectedTab = .favorite
                 }
-            TabBarItem(imageName: "account_tab", title: "Account", isSelected: selectedTab == .account)
+            TabBarItem(systemImageName: "person", title: "Account", isSelected: selectedTab == .account)
                 .onTapGesture {
                     selectedTab = .account
                 }
@@ -339,20 +341,20 @@ struct CustomTabBarView: View {
 }
 
 struct TabBarItem: View {
-    let imageName: String
+    let systemImageName: String
     let title: String
     let isSelected: Bool
 
     var body: some View {
         VStack {
-            Image(imageName)
+            Image(systemName: systemImageName)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 24, height: 24)
-                .foregroundColor(isSelected ? .green : .black) // Use green for selected, black for unselected
+                .foregroundColor(isSelected ? .green : .black)
             Text(title)
                 .font(.system(size: 10))
-                .foregroundColor(isSelected ? .green : .black) // Use green for selected, black for unselected
+                .foregroundColor(isSelected ? .green : .black)
         }
         .padding(.horizontal, 20)
     }
