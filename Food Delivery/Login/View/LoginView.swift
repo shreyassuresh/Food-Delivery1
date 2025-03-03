@@ -110,7 +110,7 @@ struct LoginView: View {
                 .padding()
                 .padding(.bottom, -40)
                 
-                NavigationLink(destination: HomeView2()){
+                NavigationLink(destination: MainTabView()){
                     Text("Login")
                         .font(.custom("YourCustomFont", size: 18))
                         .foregroundColor(.white)
