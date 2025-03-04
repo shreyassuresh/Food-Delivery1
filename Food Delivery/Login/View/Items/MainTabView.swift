@@ -1,9 +1,4 @@
-//
-//  MainTabView.swift
-//  Food Delivery
-//
-//  Created by student on 03/03/25.
-//
+
 
 import SwiftUI
 
