@@ -16,11 +16,14 @@ struct ProductDetailView: View {
         VStack(alignment: .leading) {
             // Image Section
             HStack{
-                Image(imageName)
-                   .resizable()
-                   .aspectRatio(contentMode: .fit)
-                   .frame(width: 100,height: 100)
-                   .cornerRadius(10)
+                Button(action: {
+                    // Handle add to cart action
+                }) { Image(imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 100,height: 100)
+                        .cornerRadius(10)
+                }
                 HeartButton(isHeartFilled: $isHeartFilled)
                     .padding(.top, -50)
             }

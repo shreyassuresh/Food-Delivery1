@@ -13,6 +13,7 @@ struct MainTabView: View {
                         .tag(0)
                     ExploreView()
                         .tag(1)
+                    
 //                    MyCartView()
 //                        .tag(2)
 //                    FavoritesView()
