@@ -84,9 +84,17 @@ struct HomeView2: View {
                                 )) {
                                     ProductDetailView(name: "Red Apple", imageName: "apple_red", quantity: "3pcs", price: "110")
                                 }
-                                
-                                ProductDetailView(name: "Ginger", imageName: "ginger", quantity: "250gm", price: "30")
                                 ProductDetailView(name: "Bell Pepper Red", imageName: "bell_pepper_red", quantity: "1kg", price: "50")
+                                
+                                NavigationLink(destination: ProductsDetailView(
+                                    name: "Ginger",
+                                    imageName: "ginger",
+                                    quantity: "3",
+                                    price: "50",  // Price per item
+                                    description: "Ginger Is Nutrient-Rich. Ginger May Help With Digestion. Ginger May Have Anti-Inflammatory Properties. As Part Of A Healthy And Balanced Diet.",
+                                    nutritionInfo: "Calories: 52, Fat: 0.2g, Carbs: 14g, Fiber: 2.4g",
+                                    rating: 5
+                                )) {ProductDetailView(name: "Ginger", imageName: "ginger", quantity: "250gm", price: "30")}
                                     .padding()
                                     .frame(height:250)
                                 
@@ -95,7 +103,7 @@ struct HomeView2: View {
                             .padding(.horizontal)
                         }
                         
-                        // Best Selling Section
+                
                         HStack {
                             Text("Best Selling")
                                 .font(.system(size: 23, weight: .semibold))
