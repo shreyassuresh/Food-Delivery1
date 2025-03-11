@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ECB80082D807383007BA8F1 /* MyCartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB80072D807383007BA8F1 /* MyCartView.swift */; };
+		3ECB800A2D80754D007BA8F1 /* FavoritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB80092D80754D007BA8F1 /* FavoritesView.swift */; };
+		3ECB800C2D80760E007BA8F1 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ECB800B2D80760D007BA8F1 /* AccountView.swift */; };
 		3F0C7FFA2D3A891900443AE8 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0C7FF92D3A891900443AE8 /* SignInView.swift */; };
 		3F24490B2D75B11D00B5C1BA /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24490A2D75B11D00B5C1BA /* MainTabView.swift */; };
 		3F24490D2D75B16C00B5C1BA /* TabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F24490C2D75B16C00B5C1BA /* TabButton.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3ECB80072D807383007BA8F1 /* MyCartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCartView.swift; sourceTree = "<group>"; };
+		3ECB80092D80754D007BA8F1 /* FavoritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesView.swift; sourceTree = "<group>"; };
+		3ECB800B2D80760D007BA8F1 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		3F0C7FF92D3A891900443AE8 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		3F24490A2D75B11D00B5C1BA /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		3F24490C2D75B16C00B5C1BA /* TabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TabButton.swift; path = "Food Delivery/Login/UIAll/TabButton.swift"; sourceTree = SOURCE_ROOT; };
@@ -204,6 +210,9 @@
 				3FED93332D6D98350056C4D2 /* ExploreView.swift */,
 				3FED93362D6D9F080056C4D2 /* CategoryBoxView.swift */,
 				3F3208072D731FA900B12D32 /* BeverageView.swift */,
+				3ECB80092D80754D007BA8F1 /* FavoritesView.swift */,
+				3ECB80072D807383007BA8F1 /* MyCartView.swift */,
+				3ECB800B2D80760D007BA8F1 /* AccountView.swift */,
 			);
 			path = ExploreTab;
 			sourceTree = "<group>";
@@ -302,11 +311,13 @@
 				3F90A00D2D44E49B0041191C /* UIKitExtension.swift in Sources */,
 				3F95566C2D314E0300263D0F /* WelcomeView.swift in Sources */,
 				3F95566A2D314E0300263D0F /* Food_DeliveryApp.swift in Sources */,
+				3ECB80082D807383007BA8F1 /* MyCartView.swift in Sources */,
 				3FE293C12D68912F0093BDC5 /* GroceriesItemView.swift in Sources */,
 				3F6A7A0E2D69C4E70077D17E /* BananaView.swift in Sources */,
 				3FED93372D6D9F080056C4D2 /* CategoryBoxView.swift in Sources */,
 				3FE293C42D6894520093BDC5 /* ProductView.swift in Sources */,
 				3FE293C62D68B5850093BDC5 /* ProductsDetailView.swift in Sources */,
+				3ECB800A2D80754D007BA8F1 /* FavoritesView.swift in Sources */,
 				3F73E2CD2D3E661F007EE633 /* LoginView.swift in Sources */,
 				3F46667F2D3E883700D79C18 /* SignUpView.swift in Sources */,
 				3F90A0092D44E0610041191C /* LineTextField.swift in Sources */,
@@ -315,6 +326,7 @@
 				3F3232832D3BD23200E9D24F /* UIExtension.swift in Sources */,
 				3F6D18422D43A0060096BCB4 /* MainViewModel.swift in Sources */,
 				3F90A0062D44DDF90041191C /* UserModel.swift in Sources */,
+				3ECB800C2D80760E007BA8F1 /* AccountView.swift in Sources */,
 				3FE293C82D68BB510093BDC5 /* HeartButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

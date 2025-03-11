@@ -14,12 +14,12 @@ struct MainTabView: View {
                     ExploreView()
                         .tag(1)
                     
-//                    MyCartView()
-//                        .tag(2)
-//                    FavoritesView()
-//                        .tag(3)
-//                    AccountView()
-//                        .tag(4)
+                    MyCartView()
+                        .tag(2)
+                    FavoritesView()
+                        .tag(3)
+                    AccountView()
+                        .tag(4)
                 }
                 .ignoresSafeArea(.all, edges: .bottom)
                 
