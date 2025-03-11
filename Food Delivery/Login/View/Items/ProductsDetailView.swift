@@ -8,10 +8,11 @@ struct ProductsDetailView: View {
     var description: String
     var nutritionInfo: String
     var rating: Double
-
+    
     @State private var selectedQuantity: Int = 1
     @State private var isHeartFilled: Bool = false
-
+    @State private var isTapped = false
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
@@ -21,21 +22,21 @@ struct ProductsDetailView: View {
                     .aspectRatio(contentMode: .fit)
                     .frame(height: 200)
                     .cornerRadius(10)
-
+                
                 // Product Name and Price
                 VStack(alignment: .leading) {
                     Text(name)
                         .font(.largeTitle)
                         .fontWeight(.bold)
-
+                    
                     let unitPrice = Double(price) ?? 0
                     let totalPrice = unitPrice * Double(selectedQuantity)
-
+                    
                     Text("₹ \(String(format: "%.2f", totalPrice))")
                         .font(.title2)
                         .fontWeight(.semibold)
                         .foregroundColor(Color.primaryApp)
-
+                    
                     HStack {
                         Button(action: {
                             if selectedQuantity > 1 {
@@ -45,11 +46,11 @@ struct ProductsDetailView: View {
                             Image(systemName: "minus.circle.fill")
                                 .foregroundColor(Color.primaryApp)
                         }
-
+                        
                         Text("\(selectedQuantity)")
                             .font(.title2)
                             .padding(.horizontal, 10)
-
+                        
                         Button(action: {
                             selectedQuantity += 1
                         }) {
@@ -59,20 +60,20 @@ struct ProductsDetailView: View {
                     }
                     .padding(.vertical, 10)
                 }
-
+                
                 // Heart Button (Reusable)
                 HeartButton(isHeartFilled: $isHeartFilled)
                     .padding(.top, 10)
-
+                
                 // Product Details
                 Text("Product Detail")
                     .font(.headline)
                     .padding(.top, 10)
-
+                
                 Text(description)
                     .font(.body)
                     .padding(.bottom, 10)
-
+                
                 // Nutrition Information
                 HStack {
                     Text("Nutritions")
@@ -83,11 +84,11 @@ struct ProductsDetailView: View {
                         .foregroundColor(.gray)
                 }
                 .padding(.vertical, 5)
-
+                
                 Text(nutritionInfo)
                     .font(.body)
                     .padding(.bottom, 10)
-
+                
                 // Reviews
                 HStack {
                     Text("Review")
@@ -101,27 +102,30 @@ struct ProductsDetailView: View {
                     }
                 }
                 .padding(.vertical, 5)
-
+                
                 // Add to Basket Button
                 Button(action: {
-                    // Handle add to basket action
+                    withAnimation(.easeInOut(duration: 0.9)) {
+                        // Handle add to basket action here
+                        isTapped.toggle()
+                    }
                 }) {
                     Text("Add To Basket")
                         .font(.headline)
                         .foregroundColor(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(Color.primaryApp)
+                        .background(isTapped ? Color.blue : Color.primaryApp) // Change color on tap
                         .cornerRadius(10)
+                        .shadow(radius: 5)
                 }
-                .padding(.top, 20)
+                .padding()
             }
-            .padding()
+            .navigationBarTitleDisplayMode(.inline)
+            .ignoresSafeArea()
         }
-        .navigationBarTitleDisplayMode(.inline)
     }
 }
-
 struct ProductsDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ProductsDetailView(
